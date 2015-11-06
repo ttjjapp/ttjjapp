@@ -44,6 +44,8 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+        window.location = 'https://app.tactick.com/';
+
+        //console.log('Received Event: ' + id);
     }
 };

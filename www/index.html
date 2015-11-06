@@ -1,47 +1,169 @@
-<!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-            location.href="https://app.tactick.com";
-        </script>
-    </body>
+<head>
+  <base href="https://app.tactick.com/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Tactick - Welcome!</title>
+
+  <meta http-equiv="x-ua-compatible" content="IE=10">
+
+
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/clndr.css" rel="stylesheet">
+  <link href="/css/demonav.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COpen+Sans:400,700%7CParisienne" rel="stylesheet" type="text/css">
+
+  <script src="/js/jquery-2.1.3.min.js"></script>
+  <script src="/js/moment-2.5.1.js"></script>
+  <script src="/js/clndr.js"></script>
+  <script src="/js/underscore-min.js"></script>
+  <script src="/js/jquery.color-2.1.2.min.js"></script>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+
+  <link href="/css/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
+  <script src="/js/jquery-ui-1.10.4.custom.min.js"></script>
+
+  <link href="/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+  <link href="/js/owl-carousel/owl.theme.css" rel="stylesheet">
+  <script src="/js/owl-carousel/owl.carousel.min.js"></script>
+
+  <link href="/css/other.css" rel="stylesheet">
+  <script src="/js/other.js"></script>
+
+  <link href="/css/media.css" rel="stylesheet">
+
+  <link href="/css/bootstrap-3.3.2.noboxsizing.css" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="/images/TacTickTabIcon.png">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="/js/add-to-homescreen/add-to-homescreen.css" rel="stylesheet">
+  <script src="/js/add-to-homescreen/add-to-homescreen.js"></script>
+  <script>addToHomescreen();</script>
+
+
+</head>
+<body>
+  <div id="pop_x"><div id="pop_waitingrtng"></div></div>
+  <div id="x"><div id="waitingrtng"></div></div>
+
+  <div style="position:absolute; top:54px; left:2px; width:50px; height:10px; font-size:6px;" onclick="$(this).fadeOut();">tt.jayjohnston.com<div id="view_templates_used">login_form_fields.php<br>login.php<br>login.php<br>ip_detector_js.php<br>ip_detector_js.php<br>header.php<br>footer.php</div></div>
+  <div class="wrapper">
+    <div class="row text-center text-white cap nav-container">
+<div class="nav-content-wrapper">
+  <div class="hidden-xs col-sm-1 text-center">
+    <div class="logo_menusub logout_submenu">
+      <a class="pad_x logo_iced_t cp"><img src="/images/tactick_iced_t.svg" alt=""></a>
+        <ul id="logout_submenu" class="submenu_logout">
+          <li><a href="http://tactick.com/blog" target="_blank">view blog</a></li>
+          <li><a href="http://tactick.com/contact" target="_blank">talk to us</a></li>
+              </ul>
+    </div>
+  </div>
+    </div>
+</div>
+</div>
+  </div>
+
+  <div class="page-content-wrapper">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js"></script>
+<script>
+  $(document).ready(function () {
+    var tz = jstz.determine();
+    if (typeof (tz) != 'undefined') response_text = tz.name();
+    else response_text = "America/Denver";
+    $('body').append('<input type="hidden" id="tz" name="tz" value="'+response_text+'">');
+  });
+</script>
+
+<script>login_js();</script>
+
+<div class="login_page">
+  <div class="login_logo">
+    <a href="#"><img src="/images/tactick_logo.svg" alt=""></a>
+      <span class="logo_title" color="black"><br>Time to get routinized!</span>
+  </div>
+  <form id="frmlogin" class="frmlogin" name="frmlogin" method="post" action="/login/process">
+    <div class="text-center">
+            <div class="login_name">
+        <label for="uname">Email or Username</label>
+        <input type="text" name="uname" id="uname" value="">
+        <span class="hidden erruname"></span>
+      </div>
+      <div class="login_name">
+        <label for="password">password</label>
+        <input type="password" name="upassword" id="upassword">
+        <span class="hidden errpassword"></span>
+      </div>
+      <div class="reg_err">
+        <div class="rerrfname">&nbsp;</div>
+      </div>
+      <div class="signin">
+        <a href="#" class="signinlogin" value="sign in" name="submitlogin">sign me in</a>
+      </div>
+      <div class="login_signup">
+      <a href="/signup/forgotinfo"><span>forgot my info</span></a>
+      <span class="login_devder"><span>|</span></span>
+        <a href="/signup"><span>sign up</span></a>
+      </div>
+    </div>
+  </form>
+</div>
+    <br class="content-wrapper-clear">
+  </div>
+
+<footer>
+  <div id="more_loading"></div>
+  <div id="copyright">&copy; 2015 Tactick</div>
+</footer>
+
+<div id="gen-msg" title=""></div>
+<div id="gen-pop"></div>
+
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+fbq('init', '446197115552345');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=446197115552345&ev=PageView&noscript=1"
+/></noscript>
+<script>
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+$.src="//v2.zopim.com/?3AdhH935iCFWnqu6YRqeitNcw6p6TCP9";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-46788846-3', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
 </html>
